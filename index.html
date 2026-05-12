@@ -13,6 +13,7 @@
             <link rel="stylesheet" href="assets/css/styles.css">
 
         </head>
+        
         <style>
             p, li {font-size: large;}
             a {text-decoration: none; color: black; }
@@ -33,10 +34,10 @@
                 <div class="navigation">
                     <img src="assets/img/pfp.png" alt="ProfilePic">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#project-section">Projects</a></li>
                         <li><a href="art.html">Art</a></li>
                         <li><a href="#contact-section">Contact</a></li>
+                        <li><a href="assets/img/2025_Jessica_Resume.pdf">Resume</a></li>
                     </ul>
                     
                     <div class="side-socials">
@@ -52,33 +53,34 @@
                 </div>
             </nav>
             <main>
+                <div class="content">
+                    <h1>&emsp;Hi, I'm Jessica Wang.</h1>
+                    <p>Thanks for visiting my little corner of the internet :) Feel free to look around and get to know me!</p>
+                    <ul>
+                        <li>I'm an Electrical/Computer Engineering & Management Student at McMaster University</li>
+                        <li>I have a strong interest in electronic devices and circuits, semiconductors, and embedded systems</li>
+                        <li>I have an extensive background in visual art and design</li>
+                        <li>I can speak English and Mandarin Chinese</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-section">
+                    <h2>&emsp;Skills</h2>
                     <div class="content">
-                        <h1>&emsp;Hi, I'm Jessica Wang.</h1>
-                        <p>Thanks for visiting my little corner of the internet :) Feel free to look around and get to know me!</p>
-                        <ul>
-                            <li>I'm an Electrical/Computer Engineering & Management Student at McMaster University</li>
-                            <li>I have a strong interest in electronic devices and circuits, semiconductors, and embedded systems</li>
-                            <li>I have an extensive background in visual art and design</li>
-                            <li>I can speak English and Mandarin Chinese</li>
-                        </ul>
-                        <p>Outside of work, I love </p>
-                    </div>
-
-                    <div class="content">
-                        <h2>&emsp;Skills</h2>
-                        
                         <div class="skill-row">
                             <span class="skill-name">Embedded Systems (C/C++, Assembly)</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="--percent: 0.85;"></div>
                             </div>
                         </div>
+
                         <div class="skill-row">
                             <span class="skill-name">Backend (Python, Java)</span>
                             <div class="skill-bar-container">
                                 <div class="skill-bar-fill" style="--percent: 0.7;"></div>
                             </div>
                         </div>
+
                         <div class="skill-row">
                             <span class="skill-name">Frontend (VBA, Html, CSS, JS)</span>
                             <div class="skill-bar-container">
@@ -106,6 +108,7 @@
                                 <div class="skill-bar-fill" style="--percent: 0.8;"></div>
                             </div>
                         </div>
+
                         <div class="skill-row">
                             <span class="skill-name">Design (Adobe Apps, Figma)</span>
                             <div class="skill-bar-container">
@@ -113,7 +116,29 @@
                             </div>
                         </div>
                     </div>
-                </main>
+                </div>
+
+                <div class="project-section" id="project-section">
+                    <h2>&emsp;Projects</h2>
+                    <div class="project-grid">
+                        <div class="project">
+                            <h3>Transistor Crystal Audio Amplifier</h3>
+                            <p>Designed and built a high impedance analog audio amplifier using N1418 diodes, 2N3904/06 BJTs and a piezo-electric earpiece. Biasing and performance tests were simulated in LTspice.</p>
+                        </div>
+
+                        <div class="project">
+                            <h3>LiDAR Scanner with 3D Visualization</h3>
+                            <p>Implemented a room scanner using an MSP432E401Y microcontroller programmed using Assembly, stepper motor, time-of-flight sensor. The measurements collected by the system were then plotted with a script written in Python using Open3D Libraries.</p>
+                        </div>
+
+                        <div class="project">
+                            <h3>Interactive Player-Controller Snake Game</h3>
+                            <p>Developed the classic Snake Game using C and C++, applying object-oriented principles while collaborating over GitHub.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
                 <footer id="contact-section">
                     <!-- We use the 'content' class for the border/background -->
