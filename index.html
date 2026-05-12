@@ -25,63 +25,116 @@
         <body>
 
             <!-- SECTIONING/DIV -->
-             <div class="container">
-                <header>
-                    <h1 id="flirt"> Welcome To My Portfolio!</h1>
-                </header>
-                <nav>
-                    <div class="navigation">
-                        <img src="assets/img/pfp.png" alt="ProfilePic">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+            <div class="container">
+            <header>
+                <h1 id="flirt"> Welcome To My Portfolio!</h1>
+            </header>
+            <nav>
+                <div class="navigation">
+                    <img src="assets/img/pfp.png" alt="ProfilePic">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="art.html">Art</a></li>
+                        <li><a href="#contact-section">Contact</a></li>
+                    </ul>
+                    
+                    <div class="side-socials">
+                        <a href="https://www.linkedin.com/in/wangjqjessica/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                        <a href="mailto:jiaqicawang@gmail.com"><i class="ri-mail-fill"></i></a>
+                        <a href="tel:+16478325617"><i class="ri-phone-fill"></i></a>
                     </div>
-                    <div class="status">
-                        <h3>Status...</h3>
-                        <p>WORKING: Candu Energy Inc.</p>
-                    </div>
-                </nav>
-                <main>
+                </div>
+                
+                <div class="status">
+                    <h3>Status...</h3>
+                    <p>WORKING: Candu Energy Inc.</p>
+                </div>
+            </nav>
+            <main>
                     <div class="content">
                         <h1>&emsp;Hi, I'm Jessica Wang.</h1>
                         <p>Thanks for visiting my little corner of the internet :) Feel free to look around and get to know me!</p>
-                        <p>Here are some quick facts about me:
-                            <ul>
-                                <li>I'm an Electrical/Computer Engineering & Management Student at McMaster University</li>
-                                <li>I have a strong interest in electronic devices and circuits, semiconductors, and programming hardware</li>
-                                <li>I have an extensive background in visual art and design</li>
-                                <li>I can speak English and Mandarin Chinese</li>
-                            </ul>
-                        </p>
+                        <ul>
+                            <li>I'm an Electrical/Computer Engineering & Management Student at McMaster University</li>
+                            <li>I have a strong interest in electronic devices and circuits, semiconductors, and embedded systems</li>
+                            <li>I have an extensive background in visual art and design</li>
+                            <li>I can speak English and Mandarin Chinese</li>
+                        </ul>
+                        <p>Outside of work, I love </p>
                     </div>
+
                     <div class="content">
                         <h2>&emsp;Skills</h2>
-                        <p>
-                            <li>&emsp;Languages: C++, C, Java, Python, MATLAB, R, Verilog, Assembly, Html, CSS</li>
-                            <li>&emsp;Tools: Git, GitHub, VSCode, Microsoft Office/365, Visio, Power Query</li>
-                            <li>&emsp;Softwares: Autodesk Inventor, SOLIDWORKS, Adobe Creative Suite, Figma, Jupyter Notebook, LTspice, KiCAD</li>
-                        </p>
-                    </div>
-                    <div class="content">
-                        <p><a href="assets/img/2025_Jessica_Resume.pdf"> Click for my Resume ⋆˚꩜.ᐟ </a></p>
+                        
+                        <div class="skill-row">
+                            <span class="skill-name">Embedded Systems (C/C++, Assembly)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.85;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Backend (Python, Java)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.7;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Frontend (VBA, Html, CSS, JS)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.5;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <span class="skill-name">Circuit Design (LTspice, KiCAD)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.80;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <span class="skill-name">Simulation (MATLAB, R)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.65;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <span class="skill-name">Modelling (SolidWorks & CAD)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.8;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-name">Design (Adobe Apps, Figma)</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="--percent: 0.95;"></div>
+                            </div>
+                        </div>
                     </div>
                 </main>
-                <footer>
-                    <a href="https://www.linkedin.com/in/wangjqjessica/" target="_blank" title="LinkedIn">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    &emsp;
-                    <a href="mailto:jiaqicawang@gmail.com" target="_blank" title="Email">
-                        <i class="ri-mail-fill"></i>
-                    </a>
-                    &emsp;
-                    <a href="tel:+16478325617" target="_blank" title="Phone">
-                        <i class="ri-phone-fill"></i>
-                    </a>
+
+                <footer id="contact-section">
+                    <!-- We use the 'content' class for the border/background -->
+                    <div class="content contact-wrapper">
+                        <h1 style="text-indent: 0;">Thanks for visiting; reach out!</h1>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                            <input type="hidden" name="access_key" value="9d16aed5-32e0-49a5-af9b-4610059762ba">
+                            
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+
+                            <textarea name="message" placeholder="Type your message here..." required></textarea>
+                            
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                    <p class="copyright">© 2026 Jessica Wang</p>
                 </footer>
-             </div>
+            </div>
 
             <!-- MAIN JAVASCRIPT -->
              <script src="assets/js/main.js"></script>

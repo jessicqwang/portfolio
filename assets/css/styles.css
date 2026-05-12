@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Jersey+15&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 .container {
     max-width: 1100px;
     margin: 40px auto;
@@ -46,27 +49,49 @@ main {
 }
 footer {
     grid-row: 3/4;
-    grid-column: 1/3;
-    text-align: center;
-    font-family: 'Bitcount Single', monospace;
-
-    a {
-        text-decoration: none; /* Removes underline */
-        font-size: 30px;       /* Sets icon size */
-        color: #000000;           /* Sets icon color */
-        transition: color 0.3s;
-    }
-    a:hover {
-        color: rgb(148, 100, 156);        /* Color on hover */
-    }
+    grid-column: 1 / 3; /* Spans across both grid columns */
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important; /* REMOVED: This was the 20px squeeze */
+    margin-top: 15px;
+    box-sizing: border-box;
 }
 
+.side-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(187, 174, 194, 0.3);
+}
+
+.side-socials a {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    padding: 5px !important;
+    font-size: 26px;
+    color: rgb(71, 54, 37);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.side-socials a:hover {
+    color: rgb(167, 140, 172);
+    transform: scale(1.2);
+    background: none !important;
+}
+
+#contact-section {
+    scroll-margin-top: 20px;
+    font-family: 'Jersey 15', monospace;
+}
 .content {
-    overflow: hidden;
-    overflow-x: hidden;      /* This kills the horizontal scrollbar (the black line) */
-    word-wrap: break-word;   /* Forces long sentences to wrap */
-    max-width: 100%;         /* Ensures the box doesn't grow wider than main */
-    box-sizing: border-box;  /* Ensures padding doesn't add to the width */
+    width: 100%;
+    box-sizing: border-box;
 }
 .content h1, h2, h3 {
     font-weight: 500;
@@ -133,7 +158,7 @@ footer {
     border: 1.5px solid rgb(197, 182, 167);
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease; /* Smooth transition for everything */
+    transition: all 0.3s ease;
 }
 
 .navigation a:hover {
@@ -156,4 +181,109 @@ footer {
     font-size: 24px;
     font-family: 'Bitcount Single', monospace;
     color: rgb(71, 54, 37);
+}
+
+#contact-section {
+    scroll-margin-top: 30px;
+    padding: 25px;
+}
+
+.contact-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 25px;
+    text-align: left;
+    scroll-margin-top: 40px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: 'Jersey 15', monospace;
+    font-size: 18px;
+    margin: 20px 0;
+    color: rgb(84, 76, 68);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Jersey 15', monospace;
+    font-size: 18px;
+    background-color: rgb(255, 254, 249);
+    border: 1.5px solid rgb(197, 182, 167);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.submit-btn {
+    width: 150px;
+    padding: 12px;
+    margin-top: 10px;
+    align-self: flex-start; /* Keeps it on the left */
+    font-family: 'Jersey 15', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(255, 254, 249); /* Matches your nav buttons */
+    border: 1.5px solid rgb(197, 182, 167);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(167, 140, 172); /* Your signature purple */
+    color: white;
+    border-radius: 12px;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 0 25px;
+}
+
+.skill-name {
+    font-family: 'Jersey 15', monospace;
+    font-size: 20px;
+    flex: 1;
+}
+
+.skill-bar-container {
+    flex: 2;
+    height: 12px;
+    background-color: rgb(255, 254, 249); /* Matches your button background */
+    border: 1.5px solid rgb(197, 182, 167);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: rgb(167, 140, 172); /* Your signature purple */
+    width: calc(var(--percent) * 100%);
+    border-radius: 4px;
+    transition: width 1s ease-in-out; /* Animates the bar on page load */
+}
+
+/* Optional: Add a little glow on hover */
+.skill-row:hover .skill-bar-fill {
+    filter: brightness(1.1);
+    box-shadow: 0 0 8px rgba(167, 140, 172, 0.5);
 }
