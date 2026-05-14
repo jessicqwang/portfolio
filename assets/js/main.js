@@ -1,4 +1,4 @@
-var speed = 100; // speed of effect, lower is faster
+var speed = 80; // speed of effect, lower is faster
 var flitxt;
 var flipos = 0;
 var flidir = 1;
@@ -47,4 +47,26 @@ function flaunt() {
             }
         }
     }
+}
+
+function copyEmail() {
+    const email = "jiaqicawang@gmail.com";
+    const status = document.getElementById("copy-status");
+    const icon = document.getElementById("copy-icon");
+
+    navigator.clipboard.writeText(email).then(() => {
+        // Show tooltip
+        status.classList.add("show");
+        
+        // Change Icon to Checkmark
+        icon.classList.remove("ri-file-copy-line");
+        icon.classList.add("ri-check-line");
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+            status.classList.remove("show");
+            icon.classList.remove("ri-check-line");
+            icon.classList.add("ri-file-copy-line");
+        }, 2000);
+    });
 }
